@@ -41,18 +41,18 @@ footer:
 social:
   - title: youtube
     url: https://www.youtube.com/channel/UCdzs19ZSqefC8xo1e98nCPA/videos
-  - title: Baekjoon
+  - title:
     url: http://www.acmicpc.net/user/gusdn6763
   - title: github
     url: http://github.com/gusdn6763
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+  - line: Seoul Guro
+  - line: 
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits: 010-xxxx-xxxx
 
 # Build settings
 markdown: kramdown

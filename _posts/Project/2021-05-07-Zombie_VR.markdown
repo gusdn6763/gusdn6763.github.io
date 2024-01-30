@@ -1,19 +1,19 @@
 ---
 layout: default
-modal-id: 7
-date: 2021-05-07
+modal-id: 1
 slide: 5
 size: hor
 slide-img: Zombie_VR
 img: Zombie_VR1.png
 alt: image-alt
 skills: C#, Unity,XR-Toolkit
-project-date: 2021-05-07
+project-date: 2021-04 ~ 2021-05
 category: Project
 youtube1 : https://youtu.be/Rc_TdREHvJI
 youtube2 : https://youtu.be/lzyNl8nFA84
 github: https://github.com/gusdn6763/Zombie_VR
-introduce: 게임과 달리 동영상 밝기가 너무 어두워 조절하였습니다.
-description:  <br>VR 공포 슈팅게임.  <br> <br> 난이도에 따라 몹의 스탯(데미지, 속도, 체력)이 향상됩니다.<br>총 3개의 스테이지가 있으며, 랜덤 위치에서 몹이 출현합니다.<br>부위별 피격, 소켓 및 무기별 상호작용등 개별 학습한 여러 요소를 추가했습니다. <br> 2번 영상은 공포감을 주기위해 포스트 프로세싱, 밝기, 그림자를 조절하였습니다. <p>자세한 사항은 README.md 및 youtube 참조
+introduce: 동영상 밝기가 너무 어두워 조절하였습니다.
+pname: VR 공포 슈팅게임
+description:  <br> 난이도 및 기타 설정 기능을 추가하였습니다. <br>총 3개의 스테이지가 있으며, 랜덤 위치에서 몹이 출현합니다.<br>부위별 피격, 소켓 및 무기별 상호작용등 상속구조를 통해 다형성을 추가했습니다. <br> 오브젝트 풀링, 싱글톤, 상태패턴등 여러 디자인 패턴을 적용하였습니다.
 order: 2
 ---

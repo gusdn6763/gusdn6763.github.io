@@ -111,7 +111,18 @@ header .intro-text .skills {
 
 .introduce {
 font-size: 16px;
+margin-top: -25px;
 }
+
+.Pname{
+    font-size: 25px;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.description {
+    text-align: left;
+    }
 
 @media(min-width:768px) {
     header .container {
@@ -585,7 +596,7 @@ footer .footer-below {
     justify-content: space-between;
     align-items: flex-start; /* Adjusted alignment */
     width: 100%;
-    height: 300px;
+    height: 250px;
     padding: 0 20px;
     box-sizing: border-box;
 }
@@ -602,4 +613,13 @@ footer .footer-below {
 .event-detail {
     float: left;
     text-align: left;
+}
+
+.event-line {
+    position: absolute;
+}
+
+.event-line-text {
+    position: absolute;
+    white-space: nowrap; /* Prevent text from wrapping */
 }

@@ -30,12 +30,20 @@
                          {% endif %}
                          <!-- 추가된 내용 -->
                          {% if post.introduce %}
-                         <div class="introduce" >
+                         <div class="introduce">
                          *{{ post.introduce }}
                          </div>
                          {% endif %}
+                         {% if post.name %}
+                         <div class="Pname">
+                         {{ post.pname }}
+                         </div>
+                         {% endif %}
+
                          {% if post.description %}
+                         <div class="description" >
                          <p>{{ post.description }}</p>
+                         </div>
                          {% endif %}
                          <ul class="list-inline item-details">
                              {% if post.skills %}
@@ -105,7 +113,6 @@
                          <h2>{{ post.title }}</h2>
                          <hr class="star-primary">
                          <!-- 추가된 내용 -->
-
                          {% if post.slide %}
                          {% if post.size == "hor" %}
                          <div class="bxslider">
