@@ -1,0 +1,17 @@
+---
+layout: default
+modal-id: 8
+date: 2021-01-26
+size: hor
+img: backj.png
+slide: 2
+slide-img: backj
+alt: image-alt
+skills: C++, STL
+project-date: 2021-01-26
+github: https://github.com/42somoim/42somoim1
+baekjoon : https://www.acmicpc.net/user/gusdn6763
+category: Study
+description: C++을 이용한 알고리즘 문제풀이.<br> DP, DFS, BFS, 이분탐색, 분할정복, 그리디 및 기타 알고리즘 학습
+order: 1
+---

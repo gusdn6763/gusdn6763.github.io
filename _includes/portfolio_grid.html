@@ -1,14 +1,43 @@
+
 <!-- Portfolio Grid Section -->
-<section id="portfolio">
+<section class="portfolio" id = "portfolio">
+    <div class="container portfolio-flex-grid">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2>Project</h2>
+          <hr class="star-light">
+        </div>
+      </div>
+      <div class="portfolio-flex-row">
+        {% assign post1 = site.categories.Project | sort:"order" %}
+        {% for post in post1 %}
+          <div class="portfolio-flex-item portfolio-item">
+            <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+              <div class="caption">
+                <div class="caption-content">
+                  <i class="fa fa-search-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="../img/Project_Img/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+  </div>
+</section>
+
+  <!-- Portfolio Grid Section -->
+<section class="portfolio" id ="study">
   <div class="container portfolio-flex-grid">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2>Portfolio</h2>
-        <hr class="star-primary">
+        <h2>Study</h2>
+        <hr class="star-light">
       </div>
     </div>
     <div class="portfolio-flex-row">
-      {% for post in site.posts %}
+      {% assign post2 = site.categories.Study  | sort:"order" %}
+      {% for post in post2 %}
       <div class="portfolio-flex-item portfolio-item">
         <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
           <div class="caption">
@@ -16,10 +45,12 @@
               <i class="fa fa-search-plus fa-3x"></i>
             </div>
           </div>
-          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
+          <img src="../img/Study_Img/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
         </a>
       </div>
       {% endfor %}
     </div>
   </div>
 </section>
+
+

@@ -35,3 +35,34 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$('#portfolio-link').on('show', function (e) {
+    var sliders = new Array();
+    $('.bxslider').each(function(i, slider) {
+        sliders[i] = $(slider).bxSlider();
+    });
+
+    slider.reloadSlider();
+});
+
+
+$(document).ready(function () {
+    var sliders = new Array();
+
+    $('.bxslider').each(function(i, slider) {
+        sliders[i] = $(slider).bxSlider();
+    });
+
+    $('.portfolio-link').click(function() {
+        $.each(sliders, function(i, slider) {
+            slider.destroySlider();
+            setTimeout(function(){
+                slider.reloadSlider(
+                    {
+                    }
+                );
+            },200);
+
+        });
+    });
+})

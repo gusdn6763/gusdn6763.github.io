@@ -1,47 +1,204 @@
-<!-- Portfolio Modals -->
-{% for post in site.posts %}
-<div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog"
-  aria-hidden="true">
-  <div class="modal-content">
-    <div class="close-modal" data-dismiss="modal">
-      <div class="lr">
-        <div class="rl">
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-          <div class="modal-body">
-            <h2>{{ post.title }}</h2>
-            <hr class="star-primary">
-            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
-            {% if post.description %}
-            <p>{{ post.description }}</p>
-            {% endif %}
-            <ul class="list-inline item-details">
-              {% if post.client %}
-              <li>Client:
-                <strong>{{ post.client }}</strong>
-              </li>
-              {% endif %}
-              {% if post.project-date %}
-              <li>Date:
-                <strong>{{ post.project-date }}</strong>
-              </li>
-              {% endif %}
-              {% if post.category %}
-              <li>Service:
-                <strong>{{ post.category }}</strong>
-              </li>
-              {% endif %}
-            </ul>
-            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>
-              Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-{% endfor %}
+ <!-- Portfolio Modals -->
+ {% for post in site.categories.Project %}
+ <div class="portfolio-modal modal fade" id= "portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+     <div class="modal-content">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-8 col-lg-offset-2">
+                     <div class="modal-body">
+                         <h2>{{ post.title }}</h2>
+                         <hr class="star-primary">
+                         <!-- 추가된 내용 -->
+                         {% if post.slide %}
+                         {% if post.size == "hor" %}
+                         <div class="bxslider">
+                             {% assign img_count = {{post.slide}} %}
+                             {% for i in (1..img_count) %}
+                             <img src="../img/Project_Img/{{ post.slide-img }}{{i}}.png" alt="{{ post.alt }}">
+                             {% endfor %}
+                         </div>
+                         {% else %}
+                         <div class="bxslider" id = "ver">
+                             {% assign img_count = {{post.slide}} %}
+                             {% for i in (1..img_count) %}
+                             <img src="../img/Project_Img/{{ post.slide-img }}{{i}}.png" alt="{{ post.alt }}">
+                             {% endfor %}
+                         </div>
+                         {% endif %}
+                         {% else %}
+                         <img src="../img/Project_Img/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                         {% endif %}
+                         <!-- 추가된 내용 -->
+                         {% if post.introduce %}
+                         <div class="introduce" >
+                         *{{ post.introduce }}
+                         </div>
+                         {% endif %}
+                         {% if post.description %}
+                         <p>{{ post.description }}</p>
+                         {% endif %}
+                         <ul class="list-inline item-details">
+                             {% if post.skills %}
+                             <li>Skills:
+                                 <strong>{{ post.skills }}</a>
+                                 </strong>
+                             </li>
+                             {% endif %}
+                             {% if post.project-date %}
+                             <li>Date:
+                                 <strong>{{ post.project-date }}</a>
+                                 </strong>
+                             </li>
+                             {% endif %}
+                             {% if post.category %}
+                             <li>Service:
+                                 <strong>{{ post.category }}</a>
+                                 </strong>
+                             </li>
+                             {% endif %}
+                         </ul>
+                         <!-- 추가된 내용 -->
+                         {% if post.github %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.github }}')">
+                             <i class="fa fa-bookmark"></i> Github Storage</button>
+                         {% endif %}
+
+                         {% if post.youtube1 %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick= "window.open('{{ post.youtube1 }}')">
+                             <i class="fa fa-bookmark"></i> youtube1</button>
+                         {% endif %}
+
+                         {% if post.youtube2 %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.youtube2 }}')">
+                             <i class="fa fa-bookmark"></i> youtube2</button>
+                         {% endif %}
+
+                         {% if post.unity %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.unity }}')">
+                             <i class="fa fa-bookmark"></i> unity Asset </button>
+                         {% endif %}
+                         <!-- 추가된 내용 -->
+                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ {% endfor %}
+
+ {% for post in site.categories.Study %}
+ <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
+     <div class="modal-content">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-8 col-lg-offset-2">
+                     <div class="modal-body">
+                         <h2>{{ post.title }}</h2>
+                         <hr class="star-primary">
+                         <!-- 추가된 내용 -->
+
+                         {% if post.slide %}
+                         {% if post.size == "hor" %}
+                         <div class="bxslider">
+                             {% assign img_count = {{post.slide}} %}
+                             {% for i in (1..img_count) %}
+                             <img src="../img/Study_Img/{{ post.slide-img }}{{i}}.png" alt="{{ post.alt }}">
+                             {% endfor %}
+                         </div>
+                         {% else %}
+                         <div class="bxslider" id = "ver">
+                             {% assign img_count = {{post.slide}} %}
+                             {% for i in (1..img_count) %}
+                             <img src="../img/Study_Img/{{ post.slide-img }}{{i}}.png" alt="{{ post.alt }}">
+                             {% endfor %}
+                         </div>
+                         {% endif %}
+                         {% else %}
+                         <img src="../img/Study_Img/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                         {% endif %}
+
+
+
+
+                         <!-- 추가된 내용 -->
+                         {% if post.description %}
+                         <p>{{ post.description }}</p>
+                         {% endif %}
+                         <ul class="list-inline item-details">
+                             {% if post.skills %}
+                             <li>Skills:
+                                 <strong>{{ post.skills }}</a>
+                                 </strong>
+                             </li>
+                             {% endif %}
+                             {% if post.project-date %}
+                             <li>Date:
+                                 <strong>{{ post.project-date }}</a>
+                                 </strong>
+                             </li>
+                             {% endif %}
+                             {% if post.category %}
+                             <li>Service:
+                                 <strong>{{ post.category }}</a>
+                                 </strong>
+                             </li>
+                             {% endif %}
+                         </ul>
+                         <!-- 추가된 내용 -->
+                         {% if post.github %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.github }}')">
+                             <i class="fa fa-bookmark"></i> Github Storage</button>
+                         {% endif %}
+
+                         {% if post.youtube1 %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick= "window.open('{{ post.youtube1 }})')">
+                             <i class="fa fa-bookmark"></i> youtube1</button>
+                         {% endif %}
+
+                         {% if post.youtube2 %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.youtube2 }}')">
+                             <i class="fa fa-bookmark"></i> youtube2</button>
+                         {% endif %}
+
+                         {% if post.unity %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.unity }}')">
+                             <i class="fa fa-bookmark"></i> unity Asset </button>
+                         {% endif %}
+
+                         {% if post.baekjoon %}
+                         <button type="button"
+                                 class="btn btn-default"
+                                 onclick="window.open('{{ post.baekjoon }}')">
+                             <i class="fa fa-bookmark"></i> baekjoon</button>
+                         {% endif %}
+                         <!-- 추가된 내용 -->
+                         <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ {% endfor %}
+
+
+
+  <!-- <a href="www.naver.com" style="display: flex; color: inherit; text-decoration: none; user-select: none; transition: background 100ms ease-out 0s; cursor: pointer; box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px; border-radius: 3px; background: white; overflow: hidden; position: static; height: 100%; flex-direction: column;"><div style="position: relative; width: 100%;"><div style="width: 100%; cursor: inherit;"><div style="height: 146.25px; position: relative; pointer-events: none; overflow: hidden;"><div style="width: 100%; height: 100%;"><img loading="lazy" src="/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fb0896a15-778b-4c35-be93-d3c782ec9415%2F1.png?id=23f9cac1-90e7-4239-b147-baf43498e666&amp;table=block&amp;spaceId=e7d2049e-8c4a-4f09-89df-ddc0602a5b36&amp;width=520&amp;userId=&amp;cache=v2" referrerpolicy="same-origin" style="display: block; object-fit: cover; border-radius: 1px 1px 0px 0px; width: 100%; height: 146.25px; object-position: center 45.17%;"></div><div style="position: absolute; left: 0px; right: 0px; bottom: 0px; border-bottom: 1px solid rgba(55, 53, 47, 0.09);"></div></div></div><div aria-hidden="true" style="background: rgba(0, 0, 0, 0.4); border-radius: 4px; color: white; font-size: 12px; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; width: 180px; left: calc(50% - 90px); padding: 0.3em 1.5em; pointer-events: none; position: absolute; top: calc(50% - 10px); text-align: center; opacity: 0;">이미지를 드래그해서 재배치</div><div style="color: rgba(55, 53, 47, 0.65); fill: rgba(55, 53, 47, 0.65); font-size: 12px; background: white; box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px, rgba(15, 15, 15, 0.1) 0px 2px 4px; display: flex; white-space: nowrap; border-radius: 4px; max-width: calc(100% - 16px); min-height: 24px; overflow: hidden; pointer-events: none; opacity: 0; font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Helvetica, &quot;Apple Color Emoji&quot;, Arial, sans-serif, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;; position: absolute; right: 8px; z-index: 2; top: 8px;"><div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 4px 6px; border-right: 1px solid rgba(55, 53, 47, 0.09); font-weight: 500; color: rgba(55, 53, 47, 0.65); fill: rgba(55, 53, 47, 0.65);">위치 변경</div><div role="button" tabindex="0" style="user-select: none; transition: background 20ms ease-in 0s; cursor: pointer; display: flex; align-items: center; justify-content: center; padding: 4px 6px; border-right: none; font-weight: 500; color: rgba(55, 53, 47, 0.65); fill: rgba(55, 53, 47, 0.65);"><svg role="graphics-symbol" viewBox="0 0 13 3" class="dots" style="width: 14px; height: 14px; display: block; fill: inherit; flex-shrink: 0;"><g><path d="M3,1.5A1.5,1.5,0,1,1,1.5,0,1.5,1.5,0,0,1,3,1.5Z"></path><path d="M8,1.5A1.5,1.5,0,1,1,6.5,0,1.5,1.5,0,0,1,8,1.5Z"></path><path d="M13,1.5A1.5,1.5,0,1,1,11.5,0,1.5,1.5,0,0,1,13,1.5Z"></path></g></svg></div></div></div><div style="width: 100%; display: flex; padding: 8px 10px 10px; position: relative;"><div class="notion-record-icon notranslate" style="display: flex; align-items: center; justify-content: center; height: 18px; width: 18px; border-radius: 0.25em; flex-shrink: 0; float: left; margin-top: 2px; margin-right: 4px; margin-left: -2px;"><div><div style="width: 100%; height: 100%;"><img src="/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4737be97-db45-422e-a514-21d5d4c2788b%2Fic_launcher.png?id=23f9cac1-90e7-4239-b147-baf43498e666&amp;table=block&amp;spaceId=e7d2049e-8c4a-4f09-89df-ddc0602a5b36&amp;width=40&amp;userId=&amp;cache=v2" referrerpolicy="same-origin" style="display: block; object-fit: cover; border-radius: 4px; width: 15.984px; height: 15.984px; transition: opacity 100ms ease-out 0s;"></div></div></div><div spellcheck="true" placeholder="제목 없음" data-content-editable-leaf="true" style="max-width: 100%; width: auto; white-space: pre-wrap; word-break: break-word; caret-color: rgb(55, 53, 47); font-size: 14px; line-height: 1.5; min-height: 21px; font-weight: 500; pointer-events: none;"
+     contenteditable="false">미라클 다이어리 프로젝트</div></div></a> -->

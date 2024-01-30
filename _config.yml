@@ -1,11 +1,11 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://github.com/jeromelachaud/freelancer-theme
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
-keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+title: HyeonWoo Jang
+email: gusdn6763@gmail.com
+url: https://gusdn6763.github.io
+description: "Developer Portfolio"
+keywords: "Game developer, Unity"
+skills: "능동적인 개발자"
+meta_author: JangHyeonWoo
 
 # Google webmaster tools
 google_verify:
@@ -25,30 +25,26 @@ disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  primary: 87EBE8 #80B3FF
+  primary-rgb: "135,235,232" #"128,179,255"
+  secondary: 2c3e50 #FD6E8A 주 색상
+  secondary-dark: 3F89FA #A2122F 맨 아래 색상
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
+  copyright: HyeonWoo Jang
   location: Location
   social: Around the Web
   credits: Credits
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
+  - title: youtube
+    url: https://www.youtube.com/channel/UCdzs19ZSqefC8xo1e98nCPA/videos
+  - title: Baekjoon
+    url: http://www.acmicpc.net/user/gusdn6763
   - title: github
-    url: http://github.com/jekyll
+    url: http://github.com/gusdn6763
 
 # Postal address (add as many lines as necessary)
 address:

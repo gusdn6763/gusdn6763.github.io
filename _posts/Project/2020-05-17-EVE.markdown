@@ -1,0 +1,17 @@
+---
+layout: default
+modal-id: 6
+date: 2021-05-16
+slide: 5
+slide-img: EVE
+size: hor
+img: EVE.png
+alt: image-alt
+skills: C#, Unity
+project-date: 2021-05-16
+github: https://github.com/gusdn6763/108
+youtube1 : https://youtu.be/h1uIGDPUQeY
+category: Project
+description : 스타일전이를 활용해 시각적으로 감정을 표현한 프로젝트 <br> 총 4개의 층이 존재하며 각각 분노, 슬픔, 사랑, 슬픔을 표현하였습니다. <br><br>역할 &#58; 기획 참여, 메인 개발 및 통합 담당 <br> 구현요소 &#58; 3, 4, 5, 6층 <strong>디자인</strong>을 제외한 나머지 구현 <br> <br>아쉬운점 &#58; 팀원의 개발능력이 부족해 셋팅과 통합 및 외부 요소를 전부 맡을테니 씬을 나누어 층별로 <strong>상호작용</strong>과 꾸미기를 부탁드렸다. 하지만 시간엄수가 잘 되지않고 파일과 오브젝트가 너무 많아져서 감당이 되지않았다. <br><br>개선점 &#58; 팀원의 진행 사항 및 역량 파악, 협업 개선<br>자세한 보기는 youtube 참조
+order: 1
+---
