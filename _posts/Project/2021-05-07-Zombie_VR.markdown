@@ -13,7 +13,17 @@ youtube1 : https://youtu.be/Rc_TdREHvJI
 youtube2 : https://youtu.be/lzyNl8nFA84
 github: https://github.com/gusdn6763/Zombie_VR
 introduce: 동영상 밝기가 너무 어두워 조절하였습니다.
-pname: VR 공포 슈팅게임
-description:  <br> 난이도 및 기타 설정 기능을 추가하였습니다. <br>총 3개의 스테이지가 있으며, 랜덤 위치에서 몹이 출현합니다.<br>부위별 피격, 소켓 및 무기별 상호작용등 상속구조를 통해 다형성을 추가했습니다. <br> 오브젝트 풀링, 싱글톤, 상태패턴등 여러 디자인 패턴을 적용하였습니다.
+pname: 3개의 스테이지로 구성된 VR 공포 슈팅(개인)
+description:
+    <b>**주요 특징:**</b>
+    <br>
+  - 난이도 선택, 부위별 피격, 몹의 랜덤 스폰등 다양한 기능 구현<br>
+  - 모자 착용, 총기 조작, 무기 선택등 다양한 VR 상호작용 구현<br>
+    <br>
+    <b>**기술적 구현:**</b>
+    <br>
+  - 오브젝트 풀링을 통한 총알 최적화<br>
+  - 상태 패턴을 활용한 좀비 AI 구현<br>
+  - 싱글톤, 상속 구조 등 다양한 디자인 패턴 적용으로 효율적인 코드 구조 확립<br>
 order: 2
 ---

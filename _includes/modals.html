@@ -138,7 +138,9 @@
 
                          <!-- 추가된 내용 -->
                          {% if post.description %}
-                         <p>{{ post.description }}</p>
+                        <div class="description" >
+                            <p>{{ post.description }}</p>
+                        </div>
                          {% endif %}
                          <ul class="list-inline item-details">
                              {% if post.skills %}

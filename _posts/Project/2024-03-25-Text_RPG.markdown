@@ -1,0 +1,18 @@
+---
+layout: default
+modal-id: 5
+size: hor
+img: 
+slide: 0
+slide-img: 0
+alt: image-alt
+skills: C#, Unity
+project-date: 2024-03 ~ 2025-12
+category: Project
+pname: 동적 애니메이션 텍스트 RPG 게임(팀)
+description: 
+ <b>**주요 특징:**</b>
+ <br>
+ - 기획자 1명과 현재 게임을 개발중<br>
+order: 3
+---
