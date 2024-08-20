@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const currentDate = new Date();
-    const currentYear = currentDate.getFullYear();
-    const currentMonth = currentDate.getMonth() + 1;
+document.addEventListener('DOMContentLoaded', function () 
+{
+    const minYear = 2015;
+    const maxYear = 2026;
 
     const events = [
         { startYear: 2015, startMonth: 2, endYear: 2018, endMonth: 2, text: '선린인터넷고등학교' },
@@ -9,20 +9,21 @@ document.addEventListener('DOMContentLoaded', function () {
         { startYear: 2020, startMonth: 2, endYear: 2021, endMonth: 4, text: '42Seoul' },
         { startYear: 2021, startMonth: 4, endYear: 2021, endMonth: 9, text: 'VR/AR콘텐츠 교육' },
         { startYear: 2021, startMonth: 6, endYear: 2024, endMonth: 1, text: '(주)한국가상현실' },
-        { startYear: 2023, startMonth: 2, endYear: 2025, endMonth: 2, text: '방송통신대학교' },
+        { startYear: 2023, startMonth: 2, endYear: 2026, endMonth: 2, text: '방송통신대학교' },
     ];
-    const rainbowColors = generateRainbowColors(events.length);
+    const rainbowColors = generateRainbowColors(events.length); //무지개색
     const timeline = document.getElementById('timeline');
     const eventContainer = document.getElementById('event-container');
 
-    events.forEach((event, index) => {
+    events.forEach((event, index) => 
+        {
         const eventElement = document.createElement('div');
         eventElement.classList.add('event');                                                    //클래스 네임 추가
-        const leftPosition = ((event.startYear - 2015) + (event.startMonth) / 12) / 9 * 100;    //위치조절
+        const leftPosition = ((event.startYear - minYear) + (event.startMonth) / 12) / (maxYear - minYear) * 100;    //위치조절
         eventElement.style.left = `${leftPosition}%`;
         
         // Calculate the width based on end date
-        const rightPosition = ((event.endYear - 2015) + (event.endMonth) / 12) / 9 * 100;
+        const rightPosition = ((event.endYear - minYear) + (event.endMonth) / 12) / (maxYear - minYear) * 100;
         eventElement.style.width = `${rightPosition - leftPosition}%`;
         eventElement.style.height = `25px`;
 
@@ -57,13 +58,14 @@ document.addEventListener('DOMContentLoaded', function () {
         eventContainer.appendChild(textElement);
     });
 
+    //겹치는 라인 존재시
     function findOverlappingEvent(events, currentIndex, leftPosition) 
     {
         for (let i = 0; i < currentIndex; i++) 
         {
             const otherEvent = events[i];
-            const otherLeft = ((otherEvent.startYear - 2015) + (otherEvent.startMonth) / 12) / 9 * 100;
-            const otherRight = ((otherEvent.endYear - 2015) + (otherEvent.endMonth) / 12) / 9 * 100;
+            const otherLeft = ((otherEvent.startYear - minYear) + (otherEvent.startMonth) / 12) / (maxYear - minYear) * 100;
+            const otherRight = ((otherEvent.endYear - minYear) + (otherEvent.endMonth) / 12) / (maxYear - minYear) * 100;
 
             if (leftPosition < otherRight && otherLeft < leftPosition) {
                 return document.querySelector(`.event[data-start-year="${otherEvent.startYear}"][data-start-month="${otherEvent.startMonth}"]`);
@@ -72,7 +74,8 @@ document.addEventListener('DOMContentLoaded', function () {
         return null;
     }
 
-    function generateRainbowColors(count) {
+    function generateRainbowColors(count) 
+    {
         const colors = [];
         const hueStep = 360 / count;
 
@@ -86,19 +89,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Add year markers up to the current year
-    for (let year = 2015; year <= currentYear; year++) {
-    const marker = document.createElement('div');
-    marker.classList.add('year-marker');
-    marker.style.left = `${(year - 2015) / 9 * 100}%`;
-    timeline.appendChild(marker);
+    for (let currentYear = minYear; currentYear <= maxYear; currentYear++) 
+    {
+        const marker = document.createElement('div');
+        marker.classList.add('year-marker');
+        marker.style.left = `${(currentYear - minYear) / (maxYear - minYear) * 100}%`;
+        timeline.appendChild(marker);
 
-    // Add text for the year
-    const yearText = document.createElement('div');
-    yearText.innerText = year.toString();
-    yearText.style.position = 'absolute';
-    yearText.style.top = '-25px'; // Adjust position above the timeline
-    yearText.style.left = `${(year - 2015) / 9 * 100}%`;
-    yearText.style.fontSize = '14px';
-    timeline.appendChild(yearText);
-}
+        const yearText = document.createElement('div');
+        yearText.innerText = currentYear.toString();
+        yearText.style.position = 'absolute';
+        yearText.style.top = '-25px'; // Adjust position above the timeline
+        yearText.style.left = `${(currentYear - 2015) / (maxYear - minYear) * 100}%`;
+        yearText.style.fontSize = '14px';
+        timeline.appendChild(yearText);
+    }
 });

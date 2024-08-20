@@ -109,6 +109,10 @@ header .intro-text .skills {
     width: 90%;
 }
 
+.career .container {
+    width: 90%;
+}
+
 .introduce {
 font-size: 16px;
 margin-top: -25px;
@@ -613,6 +617,8 @@ footer .footer-below {
 .event-detail {
     float: left;
     text-align: left;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.8;
 }
 
 .event-line {
